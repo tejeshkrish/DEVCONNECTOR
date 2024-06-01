@@ -1,25 +1,25 @@
 const express = require('express');
-const connectDB = require('./config/db')
+const connectDB = require('./config/db');
 
-const app= express();
+const app = express();
 
 //connect database
 
-connectDB()
+connectDB();
 
 //Init middleware
 
-app.use(express.json({extended:false}))
+app.use(express.json({ extended: false }));
 
-app.get('/', (req, res)=> res.send('API RUNING'));
+app.get('/', (req, res) => res.send('API RUNING'));
 
 // Define routes
 
-app.use('/api/users',require('./routes/api/users'))
-app.use('/api/auth',require('./routes/api/auth'))
-app.use('/api/profile',require('./routes/api/profile'))
-app.use('/api/posts',require('./routes/api/posts'))
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/profile', require('./routes/api/profile'));
+app.use('/api/posts', require('./routes/api/posts'));
 
 const PORT = process.env.PORT || 5001;
 
-app.listen(PORT, ()=> console.log(`server started on port ${PORT}`));
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));

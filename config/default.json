@@ -1,4 +1,9 @@
 {
 
-    "mongoURI":"mongodb+srv://tejeshkumar448:EGNMd2H1OtmpQQ73@devconnector.c5l6c3x.mongodb.net/?retryWrites=true&w=majority&appName=DevConnector"
+    "mongoURI":"mongodb+srv://tejeshkumar448:EGNMd2H1OtmpQQ73@devconnector.c5l6c3x.mongodb.net/?retryWrites=true&w=majority&appName=DevConnector",
+    
+    "jwtSecret":"mysecrettoken"
+
+
 }
+
